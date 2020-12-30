@@ -10,13 +10,6 @@ sections:
   templates:
   - blog-post
   - article
-- type: directory
-  path: _ambassadors
-  label: Ambassadors
-  create: all
-  match: "**/*"
-  templates:
-  - ambassador
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
