@@ -1,0 +1,77 @@
+@include keyframes(openTop) {
+  0% {
+      transform: translateY(-5px)
+      rotate(0deg);
+  }
+  50% {
+      transform: translateY(0px)
+      rotate(0deg);
+  }
+  100% {
+      transform: translateY(0px)
+      rotate(90deg);
+  }
+}
+
+@include keyframes(openMid) {
+  50% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(45deg);
+  }
+}
+
+@include keyframes(openBtm) {
+  0% {
+      transform: translateY(5px)
+      rotate(0deg);
+  }
+  50% {
+      transform: translateY(0px)
+      rotate(0deg);
+  }
+  100% {
+      transform: translateY(0px)
+      rotate(90deg);
+  }
+}
+
+@include keyframes(closedTop) {
+  0% {
+      transform: translateY(-5px)
+      rotate(0deg);
+  }
+  50% {
+      transform: translateY(0px)
+      rotate(0deg);
+  }
+  100% {
+      transform: translateY(0px)
+      rotate(90deg);
+  }
+}
+
+@include keyframes(closedMid) {
+  50% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(45deg);
+  }
+}
+
+@include keyframes(closedBtm) {
+  0% {
+      transform: translateY(5px)
+      rotate(0deg);
+  }
+  50% {
+      transform: translateY(0px)
+      rotate(0deg);
+  }
+  100% {
+      transform: translateY(0px)
+      rotate(90deg);
+  }
+}

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+<div id="particles-js text" class="particles-js">
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1 style="font-family: 'Josefin Slab', sans-serif;" class="orange-header">Zachary Montgomery</h1>
+            <h2 style="font-family: 'Roboto', sans-serif;font-size: 1.2em; font-style: italic;">{{- site.description | escape -}}</h3>
+            <!--<div id="scroll"><span id="scrolldown" class="arrow"><span></span>Scroll</span></div>-->
+        </div>
+    </div>
+    <div class="about-us index-sections content section" id="firstsection">
+        <h2 class='orange-header'>About Me</h2>
+        <p>{{- site.about | escape -}}</p>
+        <p>I write seldom, as I tend to only write what I believe will be truly meaningfull. If you are interested in hearing about coding, writing, reading, or any number of various other hobbies I have, or just my thoughts on the happenings in my life, go check out my blog!</p>
+    </div>
+    <div class="about-us index-sections content section">
+        <h2 class="orange-header">The Latest</h2>
+        {%- if site.posts.size > 0 -%}
+        <h2 class="post-list-heading">Articles</h2>
+        <ul class="post-list" style="display: -webkit-box;
+display: -ms-flexbox;
+display: -webkit-flex;
+display: flex;justify-content: space-between;flex-wrap:wrap">
+            {% assign sorted = site.posts | reverse %}
+            {%- for post in sorted limit:2 -%}
+            <li class="post">
+                <h3>
+                    <a class="post-link" href="{{ post.url | relative_url }}">
+                        {{ post.title | escape }}
+                    </a>
+                </h3>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <p><em>By {{post.author}} on {{ post.date | date: date_format}}</em></p>
+                <p>{{ post.main_content }}</p>
+            </li>
+            {%- endfor -%}
+        </ul>
+        {% else %}
+        <div>There's nothing here! Check back later.</div>
+        {% endif %}
+    </div>
+</div>

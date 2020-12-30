@@ -1,0 +1,28 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <title>{{ site.title }} | {{ page.title }}</title>
+  <link rel="canonical" href="{{ site.url }}">
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  {%- feed_meta -%}
+  {%- if site.environment == 'production' and site.matomo -%}
+    {%- include matomo.html -%}
+  {%- endif -%}
+  <link rel="icon" href="https://codingprojects.org/favicon.png">
+  <link rel="shortcut icon" href="https://codingprojects.org/favicon.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <script src="https://kit.fontawesome.com/24f71fad2c.js" crossorigin="anonymous"></script>
+  <!-- Social Media Metadata -->
+  <meta content="Zachary Montgomery" property="og:title">
+  <meta content="https://codingprojects.org{{ page.url }}" property="og:url">
+  <meta content="website" property="og:type">
+  <meta content="{{ site.description }}" property="og:description">
+  <meta content="site.logo" property="og:image">
+  <meta content="summary" name="twitter:card">
+  <meta content="Zachary Montgomery" name="twitter:title">
+  <meta content="{{ site.description }}" name="twitter:description">
+  <meta content="{{ site.logo }}" name="twitter:image">
+  <meta content="Site icon" name="twitter:image:alt">
+</head>

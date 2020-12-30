@@ -1,0 +1,53 @@
+---
+label: Article
+hide_body: false
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: date
+  hidden: false
+  default: now
+  config:
+    required: true
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: post
+- type: text
+  name: main_content
+  config:
+    required: true
+  label: Summary
+  description: A summary of the article sent in the email.
+- type: list
+  name: tags
+  description: Choose clear and specific categories about this post.
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Categories
+- type: boolean
+  name: comments
+  label: Comments
+  description: Turn comments on or off on this post.
+  default: true
+- type: text
+  name: author
+  label: Author
+  description: First and last name.
+  config:
+    required: true
+- type: file
+  name: image
+  label: Author Image
+pages:
+- _posts/2020-11-30-a-christian-s-obligation-to-the-government.md
+- _posts/a-tale-of-two-trails.md

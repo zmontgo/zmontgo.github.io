@@ -1,0 +1,32 @@
+---
+title: Zachary Montgomery
+timezone: UTC
+sass:
+  style: compressed
+collections:
+  posts:
+    title: Posts
+    output: true
+    comments: true
+  uploads:
+    title: Uploads
+    output: true
+description: 'Reader, writer, coder, and all-around ardent polymath.'
+about: 'An enthusiastic learner, I''m excited to share my thoughts about a wide variety of subjects.'
+baseurl: ''
+url: https://www.codingprojects.org
+logo: 'https://www.codingprojects.org/assets/logo.png'
+show_excerpts: true
+instagram: 'https://www.instagram.com/zachmontgo/'
+twitter: ''
+youtube: ''
+header_pages:
+- index.md
+- blog.md
+theme: minima
+plugins:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-paginate
+paginate: 5
+paginate_path: "/blog/page:num/"
