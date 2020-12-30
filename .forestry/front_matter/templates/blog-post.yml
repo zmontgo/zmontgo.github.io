@@ -48,5 +48,3 @@ fields:
 - type: file
   name: image
   label: Author Image
-pages:
-- _posts/2020-11-30-a-christian-s-obligation-to-the-government.md
