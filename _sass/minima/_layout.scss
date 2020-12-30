@@ -48,32 +48,33 @@ input[type=submit] {
   margin-left: 0;
 }
 
+
+
+.contact-btn {
+  display: block;
+  padding: 1em 2em;
+  border: #E38C2D 3px solid;
+  color: #E38C2D;
+  border-radius: 5px;
+  transition: .4s;
+  text-decoration: none;
+
+  &:hover {
+    background: white;
+    background: #E38C2D;
+  }
+}
+
 .footer-col-wrapper {
-  @include relative-font-size(0.9375);
-  color: $footer-text-color;
-  margin-left: -$spacing-unit / 2;
-  @extend %clearfix;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .footer-col {
-  float: left;
-  margin-bottom: $spacing-unit / 2;
-  padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-  width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-  width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-  width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-  width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-  width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  min-width: 20vw;
+  flex: 1;
 }
 
 .post-meta {
@@ -87,32 +88,7 @@ input[type=submit] {
   width: 47%;
 }
 
-@include media-query($on-laptop) {
-  .footer-col-1,
-  .footer-col-2 {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
-  }
-
-  .footer-col-3 {
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
-  }
-  .hiddenlink {
-    display:block;
-  }
-  .shownlink {
-    display: none;
-  }
-  .post {
-    width: 100%;
-  }
-}
-
 @include media-query($on-palm) {
-  p, .logo, a {
-    font-size: 4.5vw;
-  }
   .social-btns {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -122,11 +98,6 @@ input[type=submit] {
   }
   .post-meta {
     font-size: 1em;
-  }
-  .footer-col {
-    float: none;
-    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
   }
   .hiddenlink {
     display:block;
