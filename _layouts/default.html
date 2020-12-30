@@ -8,14 +8,19 @@
   {%- include header.html -%}
   
   <!-- below navigation -->
+
+  <div class="flex-wrapper">
   
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </main>
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+    
+    {%- include footer.html -%}
+
+  </div>
   
-  {%- include footer.html -%}
   <script src="{{ '/assets/main.js' | relative_url }}"></script>
 </body>
 

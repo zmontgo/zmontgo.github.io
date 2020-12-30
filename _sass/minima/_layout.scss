@@ -1,5 +1,5 @@
 h1, h2, h3 {
-  font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 #mc_embed_signup {
@@ -27,7 +27,7 @@ input[type=submit] {
  * Site footer
  */
 .site-footer {
-  padding: $spacing-unit 1em;
+  padding: $spacing-unit 15%;
   background-color: #000000;
 
   a:hover {
@@ -154,7 +154,7 @@ input[type=submit] {
 
 .post-list-heading {
   @include relative-font-size(1.75);
-  font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 .post-list {
@@ -184,7 +184,7 @@ input[type=submit] {
 .post-link {
   display: block;
   @include relative-font-size(1.5);
-  font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 
@@ -200,7 +200,7 @@ input[type=submit] {
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
-  font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
@@ -247,7 +247,7 @@ input[type=submit] {
 }
 .orange-header {
   color: #E38C2D;
-  font-family: 'Josefin Slab', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
 }
 .content {
   padding: .5rem 0;
@@ -709,4 +709,11 @@ display: flex;
   overflow: hidden;
   border-radius: 50%;
   margin:0 10px 0 0;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between
 }
