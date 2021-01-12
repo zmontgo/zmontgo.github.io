@@ -91,7 +91,7 @@ window.onload = function() {
     document.body.appendChild(css);
 };
 
-function scrollPageTo (to, duration=500) {
+function scrollPageTo (to, duration=200) {
   //t = current time
   //b = start value
   //c = change in value
