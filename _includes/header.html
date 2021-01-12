@@ -2,7 +2,7 @@
   {%- assign default_paths = site.pages | map: "path" -%}
   {%- assign page_paths = site.header_pages | reverse | default: default_paths | reverse -%}
   <div class="logo">
-    <a href="{{ "/" | relative_url }}"><img src="/assets/clearlogo.png" style="max-width: 75px" alt='logo'></a>
+    <a href="{{ "/" | relative_url }}" id="topnav-logo"><img src="/assets/clearlogo.png" style="max-width: 75px" alt='logo' onerror="document.getElementById('topnav-logo').innerHTML = 'Zachary M';"></a>
   </div>
 
   

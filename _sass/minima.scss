@@ -67,10 +67,10 @@ $on-laptop:        850px !default;
 
 // Import partials.
 @import
-  "custom/reset",
-  "minima/base",
-  "minima/layout",
-  "custom/header",
-  "custom/animations",
-  "minima/syntax-highlighting"
+  "imports/reset",
+  "imports/base",
+  "imports/layout",
+  "imports/header",
+  "imports/animations",
+  "imports/syntax-highlighting"
 ;
