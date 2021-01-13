@@ -81,9 +81,6 @@ figcaption {
 /**
  * Lists
  */
-ul:not(.nav-links):not(.post-list), ol:not(.nav-links) {
-  margin-left: $spacing-unit;
-}
 
 li {
   > ul,
@@ -348,4 +345,29 @@ table {
 
 .airtable-embed {
   border-radius: 0.5em;
+}
+
+/*
+  Printing styles
+*/
+
+@media print {
+  /* For links in content, visually display the link */
+  .typewrite .noscript {
+    visibility: visible!important; 
+  }
+
+  .footer-col {
+    flex: unset!important;
+    width: 100%!important;
+  }
+
+  .site-header {
+    display: none!important;
+  }
+
+  a::after { 
+    content: " (" attr(href) ")";
+    display: block;
+  }
 }

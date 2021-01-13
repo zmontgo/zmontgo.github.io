@@ -9,11 +9,19 @@ layout: default
             <h3>
               <span class="typewrite" data-period="2000" data-type='[ "Reader", "Coder", "Writer", "All-Around Polymath" ]'>
                 <span class="wrap"></span>
+                <div class="noscript" style="visibility: hidden;">Reader, Coder, Writer, and All-Around Polymath</div>
+                <noscript>
+                    <style>
+                        .noscript {
+                            visibility: visible!important;
+                        }
+                    </style>
+                </noscript>
               </span>
             </h3>
         </div>
         <span title="Click to scroll down"
-            onclick="window.scrollPageTo('#firstsection', 500);return false;" class="scroll-down"></span>
+            onclick="window.scrollPageTo('#firstsection', 500);" class="scroll-down"></span>
     </div>
     <div class="topnav-spacer" id="firstsection"></div>
     <div class="about-us index-sections content section">
@@ -21,11 +29,11 @@ layout: default
         <p>{{- site.about | escape -}}</p>
     </div>
     <div class="about-us index-sections content section">
-        <h2 class="orange-header">Freelance Web Development</h2>
+        <h2 class="orange-header">Web Developer</h2>
         <p>Proficient in frontent and backend web development, I make sure your site is tailored specifically to you or your business with a unique style to fit your branding, while keeping your site fast and secure.</p>        
     </div>
     <div class="about-us index-sections content section">
-        <h2 class="orange-header">Blog</h2>
+        <h2 class="orange-header">Blogger</h2>
         <p>I write seldom, as I tend to only write what I believe will be truly meaningfull. If you are interested in hearing about coding, writing, reading, or any number of various other hobbies I have, or just my thoughts on the happenings in my life, check out my blog!</p>
         {%- if site.posts.size > 0 -%}
         <h2 class="post-list-heading">Articles</h2>

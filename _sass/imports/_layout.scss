@@ -693,13 +693,14 @@ display: flex;
 .scroll-down {
   border: 2px solid rgba(255,255,255,0.75);
   border-radius: 20px;
-  bottom: 10vh;
+  bottom: clamp(10vh, 10.5vh, 15vh);
   height: 50px;
   left: 0;
   margin: 0 auto;
   position: absolute;
   right: 0;
   width: 30px;
+  cursor: pointer;
   
   &::before {
     animation: scrollDownAnimation 3s infinite;
