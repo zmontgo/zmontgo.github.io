@@ -28,41 +28,76 @@
 
   .menu-icon {
     display: block;
-  }
-  
-  .menu-icon.animate {
-    .menu-icon__line {
-      -webkit-animation: closedMid 0.8s backwards;
-      -o-animation: closedMid 0.8s backwards;
-      -moz-animation: closedMid 0.8s backwards;
-      animation: closedMid 0.8s backwards;
-      -webkit-animation-direction: reverse;
-      -o-animation-direction: reverse;
-      -moz-animation-direction: reverse;
-      animation-direction: reverse;
+    
+    position: relative;
+    padding: 26px 10px;
+    cursor: pointer;
+    z-index: 2;
+    &__line {
+      display: block;
+      position: relative;
+      background: #fff;
+      height: 2px;
+      width: 20px;
+      border-radius: 4px;
+      transition: background .8s ease;
+      &::before, &::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        background: #fff;
+        transition: background .8s ease;
+      }
       &::before {
-        -webkit-animation: closedTop 0.8s backwards;
-        -o-animation: closedTop 0.8s backwards;
-        -moz-animation: closedTop 0.8s backwards;
-        animation: closedTop 0.8s backwards;
-        -webkit-animation-direction: reverse;
-        -o-animation-direction: reverse;
-        -moz-animation-direction: reverse;
-        animation-direction: reverse;
+        transform: translateY(-5px);
       }
       &::after {
-        -webkit-animation: closedBtm 0.8s backwards;
-        -o-animation: closedBtm 0.8s backwards;
-        -moz-animation: closedBtm 0.8s backwards;
-        animation: closedBtm 0.8s backwards;
+        transform: translateY(5px);
+      }
+
+      &.animate {
+        -webkit-animation: closedMid 0.8s backwards;
+        -o-animation: closedMid 0.8s backwards;
+        -moz-animation: closedMid 0.8s backwards;
+        animation: closedMid 0.8s backwards;
         -webkit-animation-direction: reverse;
         -o-animation-direction: reverse;
         -moz-animation-direction: reverse;
         animation-direction: reverse;
+
+        &::before {
+          -webkit-animation: closedTop 0.8s backwards;
+          -o-animation: closedTop 0.8s backwards;
+          -moz-animation: closedTop 0.8s backwards;
+          animation: closedTop 0.8s backwards;
+          -webkit-animation-direction: reverse;
+          -o-animation-direction: reverse;
+          -moz-animation-direction: reverse;
+          animation-direction: reverse;
+        }
+        
+        &::after {
+          -webkit-animation: closedBtm 0.8s backwards;
+          -o-animation: closedBtm 0.8s backwards;
+          -moz-animation: closedBtm 0.8s backwards;
+          animation: closedBtm 0.8s backwards;
+          -webkit-animation-direction: reverse;
+          -o-animation-direction: reverse;
+          -moz-animation-direction: reverse;
+          animation-direction: reverse;
+        }
       }
     }
   }
+
   .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    list-style: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -78,17 +113,26 @@
     background-color: #272727;
     transition: opacity .8s .1s, clip-path 1s .1s;
     clip-path: circle(200px at top right);
+
     .nav-link {
       opacity: 0;
       transform: translateX(100%);
       width: 100%;
       text-align: center;
+      transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       a {
         display: block;
-        padding: 2rem 0;
+        margin: .2rem;
+        padding: 1rem .5rem;
+
+        &:hover {
+          background: rgba(255, 255, 255, .2);
+          border-radius: 5px;
+        }
       }
     }
   }
+
   .menu-btn:checked~.nav-links {
     opacity: 1;
     clip-path: circle(100% at center);
@@ -136,58 +180,11 @@
       }
     }
   }
+
   a {
     text-decoration: none;
     color: inherit;
     text-transform: uppercase;
-  }
-  .nav-links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    list-style: none;
-    .nav-link {
-      transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      a {
-        margin: .2rem;
-        padding: 1rem .5rem;
-      }
-      a:hover {
-        background: rgba(255, 255, 255, .2);
-        border-radius: 5px;
-      }
-    }
-  }
-  .menu-icon {
-    position: relative;
-    padding: 26px 10px;
-    cursor: pointer;
-    z-index: 2;
-    &__line {
-      display: block;
-      position: relative;
-      background: #fff;
-      height: 2px;
-      width: 20px;
-      border-radius: 4px;
-      transition: background .8s ease;
-      &::before, &::after {
-        content: '';
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        border-radius: 4px;
-        background: #fff;
-        transition: background .8s ease;
-      }
-      &::before {
-        transform: translateY(-5px)
-      }
-      &::after {
-        transform: translateY(5px)
-      }
-    }
   }
   .menu-btn {
     display: none;

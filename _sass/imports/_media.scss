@@ -6,44 +6,30 @@
   .input-50 {
     width: 46%;
   }
-  .site-header.scrolled {
-    .logo {
-      display: none;
-    }
-
-    .menu-btn {
+  .site-header {
+    .menu-icon {
       display: none;
     }
 
     .nav-links {
-      justify-content: space-around;
-      width: 100%;
-      a:hover {
-        border-radius: 0;
-      }
+      opacity: 1;
+      position: relative;
+      flex-direction: row;
+      justify-content: flex-end;
+      color: white;
+      clip-path: none;
+      background-color: transparent;
+      font-size: inherit;
     }
   }
-}
 
-@include media-query($on-palm) {
-  .social-btns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-around;
-  }
-  .project-meta {
-    font-size: 1em;
-  }
-  .footer-col {
-    float: none;
-  }
   .hiddenlink {
-    display: block;
+    display:none;
   }
+
+  
   .shownlink {
-    display: none;
+    display: block;
   }
 }
 
@@ -62,5 +48,15 @@
   a::after {
     content: " (" attr(href) ")";
     display: block;
+  }
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
