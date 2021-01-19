@@ -148,7 +148,7 @@ input {
 
   > li {    
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
     text-align: left;
     padding: 1em;
     border-bottom: white solid 3px;
@@ -160,7 +160,7 @@ input {
 
   > li:not(.main-post) {
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
     margin: $spacing-unit 5px;
     text-align: left;
     border-radius: 5px;
@@ -236,9 +236,6 @@ input {
 .orange-header {
   color: #E38C2D;
   font-family: 'Comfortaa', sans-serif;
-}
-.content {
-  padding: .5rem 0;
 }
 
 // Misc
@@ -391,12 +388,15 @@ input:checked ~ .tab-content {
 }
 
 .section {
-  width: 70%;
+  width: 90vw;
+  max-width: 700px;
   margin: auto;
+  padding: .5rem 0;
+  text-align: center;
 }
 
 .section.wide {
-  width: 75vw;
+  max-width: 800px;
 }
 
 .about-text {
@@ -407,7 +407,9 @@ input:checked ~ .tab-content {
 }
 
 .about-image {
-  width: 50%;
+  width: 100vw;
+  height: 50vh;
+  border-radius: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -424,9 +426,6 @@ display: flex;
 
 @media screen and (max-width: 850px) {
   .about-image {
-    width: 100vw;
-    height: 50vh;
-    border-radius: 10px;
   }
 
   .about-text {
@@ -434,20 +433,11 @@ display: flex;
     width: 100vw;
   }
 
-  .section {
-    width: 90vw;
-  }
-
-  .post {
-    min-width: 100%!important;
-  }
-
   #mc_embed_signup {
     width: 100%;
   }
 
   .content {
-    text-align: center;
   }
 }
 
