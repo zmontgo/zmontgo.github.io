@@ -22,7 +22,7 @@ twitter: ''
 youtube: ''
 header_pages:
 - index.md
-- hire.md
+- blog.md
 theme: minima
 plugins:
 - jekyll-feed
