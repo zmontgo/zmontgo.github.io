@@ -15,14 +15,19 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <script src="https://kit.fontawesome.com/24f71fad2c.js" crossorigin="anonymous"></script>
   <!-- Social Media Metadata -->
-  <meta content="Zachary Montgomery" property="og:title">
+  <meta content="Zachary Montgomery | {{ page.title }}" property="og:title">
   <meta content="https://codingprojects.org{{ page.url }}" property="og:url">
   <meta content="website" property="og:type">
-  <meta content="{{ site.description }}" property="og:description">
   <meta content="site.logo" property="og:image">
   <meta content="summary" name="twitter:card">
-  <meta content="Zachary Montgomery" name="twitter:title">
-  <meta content="{{ site.description }}" name="twitter:description">
+  <meta content="Zachary Montgomery | {{ page.title }}" name="twitter:title">
   <meta content="{{ site.logo }}" name="twitter:image">
   <meta content="Site icon" name="twitter:image:alt">
+  {%- if page.main_content -%}
+    <meta content="{{ page.main_content }}" property="og:description">
+    <meta content="{{ page.main_content }}" name="twitter:description">
+  {%- else -%}
+    <meta content="{{ site.description }}" property="og:description">
+    <meta content="{{ site.description }}" name="twitter:description">
+  {%- endif -%}
 </head>
