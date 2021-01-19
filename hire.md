@@ -7,6 +7,7 @@ layout: default
 <div class="topnav-spacer" id="firstsection"></div>
 <div class="about-us index-sections content section">
     <h1 class='orange-header'>Professional Web Development</h1>
+    <p>Proficient in frontend and backend web development, I make sure your site is tailored specifically to you or your business with a unique style to fit your branding, while keeping your site fast and secure.</p>  
     <p>Let me design, build, and test your website. I'll work hard to give it a modern and unique design, keep it secure, and make it load fast.</p>
 </div>
 <div class="about-us index-sections content section">
