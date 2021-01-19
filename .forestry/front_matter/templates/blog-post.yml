@@ -48,3 +48,5 @@ fields:
 - type: file
   name: image
   label: Author Image
+pages:
+- _posts/2021-01-19-on-friendship-and-fear.md
