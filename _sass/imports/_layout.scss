@@ -19,7 +19,12 @@ input {
   margin-bottom: 3vh;
 
   &::placeholder {
-    color: rgba(255, 255, 255, 0.9);
+    transition: .2s;
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  & :focus::placeholder {
+    color: white
   }
 
   &[type=submit] {
@@ -147,6 +152,10 @@ input {
     text-align: left;
     padding: 1em;
     border-bottom: white solid 3px;
+
+    &:nth-of-type(1) {
+      border-top: white solid 3px;
+    }
   }
 
   > li:not(.main-post) {
