@@ -12,7 +12,7 @@ collections:
     title: Uploads
     output: true
 description: 'Reader, writer, coder, and all-around ardent polymath.'
-about: 'I''m a professional web developer and casual blogger, . An enthusiastic learner, I''m excited to share my thoughts about a wide variety of subjects.'
+about: 'I''m a professional web developer, casual blogger, and enthusiastic learner, excited to share my thoughts about a wide variety of subjects.'
 baseurl: ''
 url: https://www.codingprojects.org
 logo: 'https://www.codingprojects.org/assets/logo.png'
