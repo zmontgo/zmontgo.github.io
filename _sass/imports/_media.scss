@@ -46,3 +46,21 @@
     display: none;
   }
 }
+
+/*
+  Printing styles
+*/
+
+@media print {
+  .footer-col {
+    flex: unset!important;
+    width: 100%!important;
+  }
+  .site-header {
+    display: none!important;
+  }
+  a::after {
+    content: " (" attr(href) ")";
+    display: block;
+  }
+}
