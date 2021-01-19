@@ -13,7 +13,7 @@ input {
   height: 5vh;
   background: rgba(255, 255, 255, 0);
   border: black solid 2px;
-  /* color: white; */
+  color: white;
   border-radius: 5px;
   outline: none;
   margin-bottom: 3vh;
@@ -23,7 +23,7 @@ input {
     color: rgba(255, 255, 255, 0.75);
   }
 
-  & :focus::placeholder {
+  &:focus::placeholder {
     color: white
   }
 
