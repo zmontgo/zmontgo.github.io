@@ -352,11 +352,6 @@ table {
 */
 
 @media print {
-  /* For links in content, visually display the link */
-  .typewrite .noscript {
-    visibility: visible!important; 
-  }
-
   .footer-col {
     flex: unset!important;
     width: 100%!important;

@@ -8,6 +8,9 @@ collections:
     title: Posts
     output: true
     comments: true
+  sites:
+    title: Portfolio
+    output: true
   uploads:
     title: Uploads
     output: true
