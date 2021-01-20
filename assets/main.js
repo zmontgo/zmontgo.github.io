@@ -133,5 +133,5 @@ function scrollPageTo (to, duration=500) {
   });
 }
 
-root.style.setProperty('--gradient-dark', "#181122");
-root.style.setProperty('--gradient-light', "#1b2132");
+//root.style.setProperty('--gradient-dark', "#181122");
+//root.style.setProperty('--gradient-light', "#1b2132");
