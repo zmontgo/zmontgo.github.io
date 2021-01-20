@@ -3,6 +3,7 @@ const toggler = document.querySelector('.menu-icon');
 const spacer = document.querySelector('.topnav-spacer');
 const body = document.getElementById('body');
 const selector = document.querySelector('input[name=menu-btn]');
+let root = document.documentElement;
 
 function scrollCheck() {
     const scrollPos = window.scrollY;
@@ -131,3 +132,6 @@ function scrollPageTo (to, duration=500) {
     animateScroll();
   });
 }
+
+root.style.setProperty('--gradient-dark', "#181122");
+root.style.setProperty('--gradient-light', "#1b2132");
