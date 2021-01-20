@@ -12,7 +12,7 @@ html, body {
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  background: $background-color;
+  background: fixed linear-gradient(var(--gradient-dark), var(--gradient-light));
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;
