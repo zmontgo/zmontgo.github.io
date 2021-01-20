@@ -17,16 +17,13 @@ input {
   border-radius: 5px;
   outline: none;
   margin-bottom: 3vh;
-
   &::placeholder {
     transition: .2s;
     color: rgba(255, 255, 255, 0.75);
   }
-
   &:focus::placeholder {
     color: white
   }
-
   &[type=submit] {
     cursor: pointer;
     background-color: black;
@@ -38,10 +35,10 @@ input {
 /**
  * Site footer
  */
+
 .site-footer {
   padding: $spacing-unit 15%;
   background-color: #000000;
-
   a:hover {
     color: #fff;
   }
@@ -54,13 +51,10 @@ input {
   text-align: left;
 }
 
-.contact-list,
-.social-media-list {
+.contact-list, .social-media-list {
   list-style: none;
   margin-left: 0;
 }
-
-
 
 .contact-btn {
   display: block;
@@ -70,7 +64,6 @@ input {
   border-radius: 5px;
   transition: .4s;
   text-decoration: none;
-
   &:hover {
     background: white;
     background: #E38C2D;
@@ -101,33 +94,18 @@ input {
   width: 47%;
 }
 
-@include media-query($on-palm) {
-  .social-btns {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    justify-content: space-around;
-  }
-  .post-meta {
-    font-size: 1em;
-  }
-  .hiddenlink {
-    display:block;
-  }
-  .shownlink {
-    display: none;
-  }
-}
-
 .hiddenlink {
-  display:none;
+  display: block;
 }
 
+.shownlink {
+  display: none;
+}
 
 /**
  * Page content
  */
+
 .page-content {
   flex: 1;
 }
@@ -145,22 +123,19 @@ input {
   margin-left: 0;
   list-style: none;
   width: 100%;
-
-  > li {    
+  >li {
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
     text-align: left;
     padding: 1em;
     border-bottom: white solid 3px;
-
     &:nth-of-type(1) {
       border-top: white solid 3px;
     }
   }
-
-  > li:not(.main-post) {
+  >li:not(.main-post) {
     flex: 1;
-    min-width: 300px;
+    min-width: 200px;
     margin: $spacing-unit 5px;
     text-align: left;
     border-radius: 5px;
@@ -168,18 +143,16 @@ input {
   }
 }
 
-
 .post-link {
   display: block;
   @include relative-font-size(1.5);
   font-family: 'Comfortaa', sans-serif;
 }
 
-
-
 /**
  * Posts
  */
+
 .post-header {
   margin-bottom: $spacing-unit;
 }
@@ -189,7 +162,6 @@ input {
   letter-spacing: -1px;
   line-height: 1;
   font-family: 'Comfortaa', sans-serif;
-
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
   }
@@ -197,26 +169,20 @@ input {
 
 .post-content {
   margin-bottom: $spacing-unit;
-
   h2 {
     @include relative-font-size(2);
-
     @include media-query($on-laptop) {
       @include relative-font-size(1.75);
     }
   }
-
   h3 {
     @include relative-font-size(1.625);
-
     @include media-query($on-laptop) {
       @include relative-font-size(1.375);
     }
   }
-
   h4 {
     @include relative-font-size(1.25);
-
     @include media-query($on-laptop) {
       @include relative-font-size(1.125);
     }
@@ -229,22 +195,18 @@ input {
 
 .index-header {
   text-align: center;
-  padding-top: 75px;
-  // padding-bottom: 35px;
+  padding-top: 75px; // padding-bottom: 35px;
   margin-bottom: 7em;
 }
+
 .orange-header {
   color: #E38C2D;
   font-family: 'Comfortaa', sans-serif;
 }
-.content {
-  padding: .5rem 0;
-}
 
 // Misc
-
 .holds-the-iframe {
-  background:url('https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif') center center no-repeat;
+  background: url('https://miro.medium.com/max/882/1*9EBHIOzhE1XfMYoKz1JcsQ.gif') center center no-repeat;
 }
 
 .cardholder {
@@ -265,21 +227,17 @@ input {
   width: 300px;
   color: white;
   text-align: center;
-  
   h1 {
     font-size: 2em;
     margin-bottom: 0;
   }
-  
   p {
     margin: 0.75em;
   }
-
   hr {
     margin: 1em 2em;
     border: 3px solid white;
   }
-
   span {
     font-size: .8em
   }
@@ -292,6 +250,7 @@ input.accordioninput {
 }
 
 /* Accordion styles */
+
 .tabs {
   border-radius: 8px;
   overflow: hidden;
@@ -304,22 +263,25 @@ input.accordioninput {
   color: white;
   overflow: hidden;
 }
+
 .tab-label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 1em;
   background: #750384;
   font-weight: bold;
   cursor: pointer;
   /* Icon */
 }
+
 .tab-label:hover {
   background: #090526;
 }
+
 .tab-label::after {
   content: "\276F";
   width: 1em;
@@ -328,6 +290,7 @@ input.accordioninput {
   -webkit-transition: all .35s;
   transition: all .35s;
 }
+
 .tab-content {
   max-height: 0;
   padding: 0 1em;
@@ -336,43 +299,47 @@ input.accordioninput {
   -webkit-transition: all .35s;
   transition: all .35s;
 }
+
 .tab-close {
   display: -webkit-box;
   display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex: 0 0 auto;
   -webkit-box-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
   padding: 1em;
   font-size: 0.75em;
   background: #2c3e50;
   cursor: pointer;
 }
+
 .tab-close:hover {
   background: #1a252f;
 }
 
-input:checked + .tab-label {
+input:checked+.tab-label {
   background: #1a252f;
 }
-input:checked + .tab-label::after {
+
+input:checked+.tab-label::after {
   -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  transform: rotate(90deg);
 }
-input:checked ~ .tab-content {
+
+input:checked~.tab-content {
   padding: 1em;
   max-height: 100vh;
   overflow: scroll;
 }
 
 /* The hero image */
+
 .hero-image {
   /* Set a specific height, remove padding to make it exactly the size of the screen */
   height: 100vh;
   padding: 0;
-
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
   background-repeat: no-repeat;
@@ -381,6 +348,7 @@ input:checked ~ .tab-content {
 }
 
 /* Place text in the middle of the image */
+
 .hero-text {
   text-align: center;
   position: absolute;
@@ -391,12 +359,15 @@ input:checked ~ .tab-content {
 }
 
 .section {
-  width: 70%;
+  width: 90vw;
+  max-width: 700px;
   margin: auto;
+  padding: .5rem 0;
+  text-align: center;
 }
 
 .section.wide {
-  width: 75vw;
+  max-width: 800px;
 }
 
 .about-text {
@@ -407,7 +378,9 @@ input:checked ~ .tab-content {
 }
 
 .about-image {
-  width: 50%;
+  width: 100vw;
+  height: 50vh;
+  border-radius: 10px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -415,54 +388,28 @@ input:checked ~ .tab-content {
 
 .about-wrapper {
   display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-@media screen and (max-width: 850px) {
-  .about-image {
-    width: 100vw;
-    height: 50vh;
-    border-radius: 10px;
-  }
-
-  .about-text {
-    text-align: center;
-    width: 100vw;
-  }
-
-  .section {
-    width: 90vw;
-  }
-
-  .post {
-    min-width: 100%!important;
-  }
-
-  #mc_embed_signup {
-    width: 100%;
-  }
-
-  .content {
-    text-align: center;
-  }
 }
 
 .social-btns {
   overflow: hidden;
 }
+
 .social-btns .btn, .social-btns .btn:before, .social-btns .btn .fab {
   transition: all 0.35s;
   transition-timing-function: cubic-bezier(0.31, -0.105, 0, 0);
 }
+
 .social-btns .btn:before {
   top: 90%;
   left: -110%;
   visibility: visible;
 }
+
 .social-btns .btn .fab {
   -webkit-transform: scale(0.8);
   transform: scale(0.8);
@@ -470,12 +417,10 @@ display: flex;
 
 .social-btns .btn.instagram {
   color: $instagram;
-  
   &:hover {
     transition: background-color 1s;
     background: $instagram;
   }
-
   &:before {
     background: $instagram;
   }
@@ -483,12 +428,10 @@ display: flex;
 
 .social-btns .btn.twitter {
   color: $twitter;
-
   &:hover {
     transition: background-color 1s;
     background: $twitter;
   }
-
   &:before {
     background: $twitter;
   }
@@ -496,12 +439,10 @@ display: flex;
 
 .social-btns .btn.google {
   color: $google;
-
   &:hover {
     transition: background-color 1s;
     background: $google;
   }
-
   &:before {
     background: $google;
   }
@@ -511,13 +452,16 @@ display: flex;
   top: -10%;
   left: -10%;
 }
+
 .social-btns .btn:focus .fab, .social-btns .btn:hover .fab {
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
 .social-btns .btn:focus, .social-btns .btn:hover {
   color: white;
 }
+
 .social-btns {
   position: relative;
   top: 0;
@@ -525,6 +469,7 @@ display: flex;
   left: 0;
   right: 0;
 }
+
 .social-btns .btn {
   display: inline-block;
   background: #fff;
@@ -536,9 +481,10 @@ display: flex;
   position: relative;
   overflow: hidden;
   border-radius: 30%;
-  box-shadow: 0 7px 18px -7px rgba(0,0,0,0.18);
+  box-shadow: 0 7px 18px -7px rgba(0, 0, 0, 0.18);
   opacity: 0.99;
 }
+
 .social-btns .btn:before {
   content: '';
   width: 120%;
@@ -552,24 +498,34 @@ display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   height: 40px;
   width: 50px;
 }
 
-@keyframes fadein{
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@-webkit-keyframes fadein{
-  0% { opacity:0; }
-  66% { opacity:0; }
-  100% { opacity:1; }
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-
-
 
 /*.scrolled #scroll {
   transition: 1s;
@@ -669,19 +625,18 @@ display: flex;
   margin: auto;
   width: 50vw;
   display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-  
   .links {
     width: 50%;
     margin: 0 auto 2em auto;
     display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
     justify-content: space-around;
   }
 }
@@ -696,7 +651,7 @@ display: flex;
   max-height: 50px;
   overflow: hidden;
   border-radius: 50%;
-  margin:0 10px 0 0;
+  margin: 0 10px 0 0;
 }
 
 .flex-wrapper {
@@ -707,7 +662,7 @@ display: flex;
 }
 
 .scroll-down {
-  border: 2px solid rgba(255,255,255,0.75);
+  border: 2px solid rgba(255, 255, 255, 0.75);
   border-radius: 20px;
   bottom: clamp(10vh, 10.5vh, 15vh);
   height: 50px;
@@ -717,10 +672,9 @@ display: flex;
   right: 0;
   width: 30px;
   cursor: pointer;
-  
   &::before {
     animation: scrollDownAnimation 3s infinite;
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 100%;
     content: '';
     height: 8px;

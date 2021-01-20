@@ -14,7 +14,7 @@ $spacing-unit:     30px !default;
 
 $text-color:       #ffffff !default;
 $footer-text-color: #ffffff !default;
-$background-color: white !default;
+$background-color: fixed linear-gradient(#614385, #516395) !default;
 $brand-color:      lighten(#0040d3, 45%) !default;
 
 $instagram: #DD2A7B;
@@ -72,5 +72,6 @@ $on-laptop:        850px !default;
   "imports/layout",
   "imports/header",
   "imports/animations",
-  "imports/syntax-highlighting"
+  "imports/syntax-highlighting",
+  "imports/media"
 ;

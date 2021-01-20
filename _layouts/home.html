@@ -27,11 +27,13 @@ layout: default
         <h2 class="orange-header">Blog</h2>
         <p>I write seldom, as I tend to only write what I believe will be truly meaningful. If you are interested in hearing about coding, writing, reading, or any number of various other hobbies I have, or just my thoughts on the happenings in my life, check out my blog!</p>
         {%- if site.posts.size > 0 -%}
-        <h2 class="post-list-heading">Articles</h2>
-        <ul class="post-list" style="display: -webkit-box;
-display: -ms-flexbox;
-display: -webkit-flex;
-display: flex;justify-content: space-between;flex-wrap:wrap">
+        <ul class="post-list" style="
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap:wrap">
             {% assign sorted = site.posts | reverse %}
             {%- for post in sorted limit:2 -%}
             <li class="post">
