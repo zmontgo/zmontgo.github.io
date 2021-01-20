@@ -20,6 +20,11 @@
       clip-path: none;
       background-color: transparent;
       font-size: inherit;
+
+      .nav-link {
+        width: unset;
+        margin: 0 .5em;
+      }
     }
   }
 
