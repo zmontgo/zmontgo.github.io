@@ -1,10 +1,9 @@
-const DARK_THEME = '(prefers-color-scheme: dark)'
-const LIGHT_THEME = '(prefers-color-scheme: light)'
+const DARK_THEME = '(prefers-color-scheme: dark)';
 
 function changeWebsiteTheme(scheme) {
-  const scheme = e.matches ? 'dark' : 'light';
+  const new_scheme = scheme.matches ? 'dark' : 'light';
   
-  if (scheme === 'dark') {
+  if (new_scheme === 'dark') {
     root.style.setProperty('--background-color', "#222");
     root.style.setProperty('--text-color', "#fff");
     root.style.setProperty('--text-grey-color', "#999");
@@ -20,7 +19,10 @@ function detectColorScheme() {
       return
     }
     const mqDark = window.matchMedia(DARK_THEME);
-    mqDark.addEventListener('change', changeWebsiteTheme());
+    mqDark.addEventListener('change', e => { changeWebsiteTheme() });
+  
+    // Check if needed to be changed on page load
+    changeWebsitetheme(mqDark);
 }
 
-changeWebsitetheme();
+detectColorScheme();
