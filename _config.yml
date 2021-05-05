@@ -1,35 +1,17 @@
 ---
-title: Zachary Montgomery
+title: Page Title
 timezone: UTC
 sass:
+  sass_dir: _sass
   style: compressed
-collections:
-  posts:
-    title: Posts
-    output: true
-    comments: true
-  sites:
-    title: Portfolio
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-description: 'Reader, writer, coder, and all-around ardent polymath.'
-about: 'I''m a professional web developer, casual blogger, and enthusiastic learner, excited to share my thoughts about a wide variety of subjects.'
+title: 'Zachary Montgomery'
+description: 'Professional full-stack web developer; skilled at designing, building, testing, and deploying websites of all types, be they simple or complex.'
 baseurl: ''
-url: https://www.codingprojects.org
-logo: 'https://www.codingprojects.org/assets/logo.png'
-show_excerpts: true
-instagram: 'https://www.instagram.com/zachmontgo/'
-twitter: ''
-youtube: ''
-header_pages:
-- index.md
-- blog.md
+url: https://codingprojects.org
+contact: 'zachmontgo@outlook.com'
+logo: 'https://codingprojects.org/assets/logo.png'
 theme: minima
 plugins:
-- jekyll-feed
 - jekyll-sitemap
-- jekyll-paginate
-paginate: 5
-paginate_path: "/blog/page:num/"
+collections:
+  - projects

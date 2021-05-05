@@ -2,54 +2,61 @@
 layout: default
 ---
 
-<div id="particles-js text" class="particles-js">
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1 class="orange-header">Zachary Montgomery</h1>
-            <h3>
-              <span class="typewrite" data-period="2000" data-type='[ "Reader", "Coder", "Writer", "All-Around Polymath" ]'>
-                <span class="wrap"></span>
-                <noscript>
-                    <div>Reader, Coder, Writer, and All-Around Polymath</div>
-                </noscript>
-              </span>
-            </h3>
+<div class="section section__hero">
+  <div class="hero-img">
+    <img src="/assets/me.png" alt="Female runners competing on a track.">
+  </div>
+  <div class="hero-txt">
+    <h1 class="main-title purple-txt">{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </div>
+</div>
+  
+  <div class="section">
+    <h1 class="purple-txt">My Work</h1>
+    <p>
+      Recent projects I've engaged in. I mostly work on websites, but I do all sorts of things, including making Discord bots.
+    </p>
+    <div class="projects">
+      {% for project in site.projects %}
+        <div class="project">
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description }}</p>
+          <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" class="btn btn__purple">Check It Out</a>
         </div>
-        <span title="Click to scroll down"
-            onclick="window.scrollPageTo('#firstsection', 500);" class="scroll-down"></span>
+      {% endfor %}
     </div>
-    <div class="topnav-spacer" id="firstsection"></div>
-    <div class="about-us index-sections content section">
-        <h2 class='orange-header'>About</h2>
-        <p>{{- site.about | escape -}}</p>
+  </div>
+  
+  <hr>
+
+  <div class="section">
+    <h1 class="purple-txt">My Reviews</h1>
+    <p>Here's what people have to say about me.</p>
+
+    <div class="projects">
+      {% for review in site.reviews %}
+        <div class="project">
+          <img src="{{ review.img_src }}"
+          <h3>{{ review.person }}</h3>
+          <p>{{ review.description }}</p>
+        </div>
+      {% endfor %}
     </div>
-    <div class="about-us index-sections content section">
-        <h2 class="orange-header">Blog</h2>
-        <p>I write seldom, as I tend to only write what I believe will be truly meaningful. If you are interested in hearing about coding, writing, reading, or any number of various other hobbies I have, or just my thoughts on the happenings in my life, check out my blog!</p>
-        {%- if site.posts.size > 0 -%}
-        <ul class="post-list" style="
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap:wrap">
-            {% assign sorted = site.posts | reverse %}
-            {%- for post in sorted limit:2 -%}
-            <li class="post">
-                <h3>
-                    <a class="post-link" href="{{ post.url | relative_url }}">
-                        {{ post.title | escape }}
-                    </a>
-                </h3>
-                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-                <p><em>By {{post.author}} on {{ post.date | date: date_format}}.</em></p>
-                <p>{{ post.main_content }}</p>
-            </li>
-            {%- endfor -%}
-        </ul>
-        {% else %}
-        <div>There's nothing here! Check back later.</div>
-        {% endif %}
-    </div>
+  </div>
+
+  <div class="section section__purple">
+    <h1>Contact</h1>
+    <p>Interested in learning more or having a website made? Please reach out!</p>
+    <a href="mailto:zachmontgo@outlook.com" target="_blank" rel="noopener noreferrer" class="btn">Contact Me!</a>
+  </div>
+
+  <div class="section">
+    <h1 class="purple-txt">Donate</h1>
+    <p>
+      I'm a big supporter of open source. A lot of work I do is free for everyone to use, enjoy, and modify as they see fit. However, I still need to earn a living.
+    </p>
+    <p>If you feel you've benefitted from anything I've made and want to help out (or even if you haven't and just want to help support open source development), please consider buying me a coffee! Even just $5 helps a lot.</p>
+    <a href="https://www.buymeacoffee.com/zmontgo" target="_blank" rel="noopener noreferrer" class="btn btn__purple">Buy Me a Coffee</a>
+  </div>
 </div>

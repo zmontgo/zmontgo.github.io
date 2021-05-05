@@ -1,67 +1,39 @@
-@media screen and (min-width: 850px) {
-  .about-image {
-    width: 50%;
-  }
+@media only screen and (min-width: $on-desktop) {
+  .section {
+    flex-direction: row;
+    text-align: left;
 
-  .input-50 {
-    width: 46%;
-  }
-  .site-header {
-    .menu-icon {
-      display: none;
-    }
-
-    .nav-links {
-      opacity: 1;
-      position: relative;
-      flex-direction: row;
-      justify-content: flex-end;
-      color: white;
-      clip-path: none;
-      background-color: transparent;
-      font-size: inherit;
-
-      .nav-link {
-        width: unset;
-        margin: 0 .5em;
+    &__hero {
+      .hero-img {
+        img {
+          float: right;
+          margin-right: $spacing-unit;
+        }
+      }
+      
+      .hero-img, .hero-txt {
+        margin: 0;
+        text-align: left;
       }
     }
+
+    .footer-col {
+      margin: 0;
+      text-align: left;
+    }
   }
 
-  .hiddenlink {
-    display:none;
-  }
+  .btn {
+    &:hover {
+      color: #000;
+      background: darken(#fff, 5%);
+      transform: translateY(-3px);
+      box-shadow: 0 3px 3px rgba(darken($purple-color, 7%), 0.5);
+    }
 
-  
-  .shownlink {
-    display: block;
-  }
-}
-
-/*
-  Printing styles
-*/
-
-@media print {
-  .footer-col {
-    flex: unset!important;
-    width: 100%!important;
-  }
-  .site-header {
-    display: none!important;
-  }
-  a::after {
-    content: " (" attr(href) ")";
-    display: block;
-  }
-}
-
-/* Remove all animations and transitions for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    &:active {
+      transform: translate(0, 0);
+      box-shadow: none;
+    } 
   }
 }

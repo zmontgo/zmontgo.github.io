@@ -2,7 +2,7 @@
  * Basic styling
  */
 
-html, body {
+ html, body {
   min-height: 100%;
   width: 100vw;
   max-width: 100%;
@@ -11,6 +11,7 @@ html, body {
 
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font-display: optional;
   color: $text-color;
   background: fixed linear-gradient(var(--gradient-dark), var(--gradient-light));
   -webkit-text-size-adjust: 100%;
@@ -28,7 +29,10 @@ body {
 
 hr {
   border: 0;
-  border-top: 0.1em solid black
+  border-top: $spacing-unit/5 solid $light-grey;
+  width: calc(75vw - #{$spacing-unit*2});
+  max-width: $spacing-unit*10;
+  border-radius: $border-radius;
 }
 
 /**
@@ -85,12 +89,10 @@ li {
 
 h1 {
   font-size: 2.5em;
-  margin: .67em 0
 }
 
 h2 {
   font-size: 2em;
-  margin: .75em 0
 }
 
 h3 {
@@ -136,6 +138,7 @@ a {
 
 a {
   position: relative;
+  text-underline-offset: 2px;
 }
 
 a:before {
@@ -319,26 +322,26 @@ pre {
  */
 
 table {
-  margin-bottom: $spacing-unit;
   width: 100%;
   text-align: $table-text-align;
   border-collapse: collapse;
-  border: 1px solid $grey-color-light;
+  border: 1px solid $light-grey;
+
   tr {
     &:nth-child(even) {
-      background-color: lighten($grey-color-light, 6%);
+      background-color: lighten($light-grey, 6%);
     }
   }
   th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
-    background-color: lighten($grey-color-light, 3%);
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
+    background-color: $purple-color;
+    color: white;
+    border: 1px solid darken($light-grey, 6%);
   }
   td {
-    border: 1px solid $grey-color-light;
+    border: 1px solid $light-grey;
   }
 }
 
