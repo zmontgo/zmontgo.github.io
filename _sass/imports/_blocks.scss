@@ -78,7 +78,7 @@
       padding: 0 $spacing-unit;
 
       p {
-        color: darken($grey-color, 30%);
+        color: var(--grey-text-color); // #666 for light, #999 for dark
       }
     }
 

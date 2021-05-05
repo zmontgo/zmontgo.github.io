@@ -12,8 +12,8 @@
 body {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   font-display: optional;
-  color: $text-color;
-  background: fixed linear-gradient(var(--gradient-dark), var(--gradient-light));
+  color: var(--text-color);
+  background: var(--background-color);
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
   -moz-font-feature-settings: "kern" 1;

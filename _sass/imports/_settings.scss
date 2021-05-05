@@ -53,3 +53,9 @@ $on-desktop: $content-width+(4*$spacing-unit) !default;
 @function css-clamp( $values... ) {
 	@return css-function( clamp, $values );
 }
+
+:root {
+  --background-color: #fff;
+	--text-color: #000;
+	--text-grey-color: #666;
+}
