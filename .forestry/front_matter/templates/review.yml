@@ -1,0 +1,23 @@
+---
+label: Review
+hide_body: true
+fields:
+- name: img_src
+  type: text
+  config:
+    required: false
+  label: Image link
+- name: person
+  type: text
+  config:
+    required: false
+  label: Reviewer
+- name: description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Description
