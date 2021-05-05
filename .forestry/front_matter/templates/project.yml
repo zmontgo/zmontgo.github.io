@@ -1,0 +1,13 @@
+---
+label: Project
+hide_body: true
+fields:
+- type: text
+  name: name
+  label: name
+- type: text
+  name: description
+  label: description
+- type: text
+  name: link
+  label: link
