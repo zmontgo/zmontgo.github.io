@@ -12,6 +12,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
+  gap: $spacing-unit/2;
 
   .card {
     border: $spacing-unit/5 solid $purple-color;
@@ -151,7 +152,7 @@
 }
 
 .main-title {
-  @include relative-font-size(3.5);
+  font-size: css-min(#{$base-font-size*3.5}, 3em)
 }
 
 .share {

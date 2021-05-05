@@ -24,6 +24,13 @@
   }
 
   .btn {
+    &__purple {
+      &:hover {
+        color: #fff!important;
+        background: darken($purple-color, 5%)!important;
+      }
+    }
+
     &:hover {
       color: #000;
       background: darken(#fff, 5%);
