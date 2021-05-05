@@ -1,4 +1,5 @@
 const DARK_THEME = '(prefers-color-scheme: dark)';
+const root = document.documentElement;
 
 function changeWebsiteTheme(scheme) {
   const new_scheme = scheme.matches ? 'dark' : 'light';
