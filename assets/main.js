@@ -22,7 +22,7 @@ function detectColorScheme() {
     mqDark.addEventListener('change', e => { changeWebsiteTheme() });
   
     // Check if needed to be changed on page load
-    changeWebsitetheme(mqDark);
+    changeWebsiteTheme(mqDark);
 }
 
 detectColorScheme();
