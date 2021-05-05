@@ -7,18 +7,24 @@
   color: lighten($light-grey, 5%);
 }
 
-.projects {
+.cards {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
 
-  .project {
+  .card {
     border: $spacing-unit/5 solid $purple-color;
     border-radius: $border-radius;
     padding: $spacing-unit/2 $spacing-unit;
     width: $spacing-unit*10;
     text-align: center;
+
+    img {
+      width: 50%;
+      margin: $spacing-unit auto;
+      border-radius: 100%;
+    }
 
     h3 {
       font-size: 1.25em;

@@ -17,9 +17,9 @@ layout: default
     <p>
       Recent projects I've engaged in. I mostly work on websites, but I do all sorts of things, including making Discord bots.
     </p>
-    <div class="projects">
+    <div class="cards">
       {% for project in site.projects %}
-        <div class="project">
+        <div class="card">
           <h3>{{ project.name }}</h3>
           <p>{{ project.description }}</p>
           <a href="{{ project.link }}" target="_blank" rel="noopener noreferrer" class="btn btn__purple">Check It Out</a>
@@ -34,10 +34,10 @@ layout: default
     <h1 class="purple-txt">Reviews</h1>
     <p>Here's what people have to say about me.</p>
 
-    <div class="projects">
+    <div class="cards">
       {% for review in site.reviews %}
-        <div class="project">
-          <img src="{{ review.img_src }}"
+        <div class="card">
+          <img src="{{ review.img_src }}">
           <h3>{{ review.person }}</h3>
           <p>{{ review.description }}</p>
         </div>
