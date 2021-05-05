@@ -7,11 +7,11 @@ function changeWebsiteTheme(scheme) {
   if (new_scheme === 'dark') {
     root.style.setProperty('--background-color', "#222");
     root.style.setProperty('--text-color', "#fff");
-    root.style.setProperty('--text-grey-color', "#999");
+    root.style.setProperty('--grey-text-color', "#999");
   } else {
     root.style.setProperty('--background-color', "#fff");
     root.style.setProperty('--text-color', "#000");
-    root.style.setProperty('--text-grey-color', "#666");
+    root.style.setProperty('--grey-text-color', "#666");
   }
 }
 
