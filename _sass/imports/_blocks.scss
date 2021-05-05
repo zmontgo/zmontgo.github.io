@@ -16,10 +16,13 @@
   .project {
     border: $spacing-unit/5 solid $purple-color;
     border-radius: $border-radius;
-    padding: $spacing-unit;
-    width: $spacing-unit*7;
-    height: $spacing-unit*7;
+    padding: $spacing-unit/2 $spacing-unit;
+    width: $spacing-unit*10;
     text-align: center;
+
+    h3 {
+      font-size: 1.25em;
+    }
   }
 }
 
