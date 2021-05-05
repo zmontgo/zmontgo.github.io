@@ -14,7 +14,5 @@ theme: minima
 plugins:
 - jekyll-sitemap
 collections:
-  projects:
-    output: true
-  reviews:
-    output: true
+  - projects
+  - reviews
