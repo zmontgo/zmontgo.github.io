@@ -21,3 +21,5 @@ fields:
     schema:
       format: markdown
   label: Description
+pages:
+- _reviews/christiaan.md
