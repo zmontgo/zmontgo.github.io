@@ -29,6 +29,8 @@ $content-width: 800px !default;
 
 $on-desktop: $content-width+(4*$spacing-unit) !default;
 
+$transition-time: 0.2s;
+
 @mixin relative-font-size($ratio) {
   font-size: $base-font-size * $ratio;
 }

@@ -1,17 +1,28 @@
 
-<footer class="site-footer section">    
-  <div class="footer-col footer-col-2">
-    <h2 class="footer-heading">Quick Links</h2>
-    <ul style="font-size: 1.1em">
-      <li style="margin: 0.5em 0;">
-        <a href="mailto:{{ site.contact }}" target="_blank" rel="noopener noreferrer">Contact</a>
-      </li>
-      <li style="margin: 0.5em 0;">
-        <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
-      </li>
-      <li style="margin: 0.5em 0;">
-        <a href="/sitemap/" target="_blank" rel="noopener noreferrer">Sitemap</a>
-      </li>
-    </ul>
+<footer class="site-footer section">  
+  <div class="section" style="display:flex;flex-wrap:wrap;padding:0">
+    <div class="footer-col">
+      <h2 class="footer-heading">Quick Links</h2>
+      <ul style="font-size: 1.1em">
+        <li style="margin: 0.5em 0;">
+          <a href="mailto:{{ site.contact }}" target="_blank" rel="noopener noreferrer">Contact</a>
+        </li>
+        <li style="margin: 0.5em 0;">
+          <a href="/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        </li>
+        <li style="margin: 0.5em 0;">
+          <a href="/sitemap/" target="_blank" rel="noopener noreferrer">Sitemap</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h2 class="footer-heading">Dark Mode</h2>
+      <p>We'll use a cookie to remember your preference. We use your system theme by default.</p>
+      <div style="display: inline-block;width: min-content;">
+        <input type="checkbox" id="toggle" class="toggle" onclick="changeWebsiteTheme()">
+        <label for="toggle"></label>
+      </div>
+    </div>
   </div>
 </footer>

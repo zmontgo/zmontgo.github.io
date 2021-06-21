@@ -120,8 +120,8 @@
 .footer-col {
   padding: 0 $spacing-unit;
   margin: $spacing-unit auto;
-  width: calc(100vw - 60px);
-  max-width: $content-width;
+  width: 50%;
+  min-width: $content-width/2;
 
   ul {
     list-style-position: inside;
@@ -177,7 +177,7 @@
   text-align: center;
   color: #000;
   cursor: pointer;
-  transition: .25s;
+  transition: $transition-time*10;
 
   input {
     display:none;
@@ -215,4 +215,41 @@
         
       }
       
+}
+
+.toggle {
+	display: none;
+	&:checked {
+    & + label {
+      background-color: #000;
+      &:before {
+        transform: translateX($spacing-unit*1.5);
+      }
+    }
+	}
+
+  & ~ label {
+    display: flex;
+    width: $spacing-unit*3;
+    height: $spacing-unit*1.5;
+    border: 3px solid;
+    border-radius: 99em;
+    position: relative;
+    transition: transform $transition-time*2 ease;
+    transform-origin: 50% 50%;
+    cursor: pointer;
+    
+    &:before {
+      transition: transform $transition-time*2 ease;
+      content: "";
+      display: block;
+      position: absolute;
+      width: $spacing-unit/1.5;
+      height: $spacing-unit/1.5;
+      background-color: #fff;
+      border-radius: 50%;
+      top: $spacing-unit/3;
+      left: $spacing-unit/3;
+    }
+  }
 }

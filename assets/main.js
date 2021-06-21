@@ -1,29 +1,67 @@
-const DARK_THEME = '(prefers-color-scheme: dark)';
-const root = document.documentElement;
+const DARK_THEME = '(prefers-color-scheme: dark)'
+const root = document.documentElement
+const slider = document.getElementById('toggle')
+var current_theme = 'light';
 
-function changeWebsiteTheme(scheme) {
-  const new_scheme = scheme.matches ? 'dark' : 'light';
-  
-  if (new_scheme === 'dark') {
-    root.style.setProperty('--background-color', "#222");
-    root.style.setProperty('--text-color', "#fff");
-    root.style.setProperty('--grey-text-color', "#999");
+function changeWebsiteTheme() {
+  if (current_theme === 'light') {
+    root.style.setProperty('--background-color', "#222")
+    root.style.setProperty('--text-color', "#fff")
+    root.style.setProperty('--grey-text-color', "#999")
+
+    current_theme = 'dark'
+    setCookie('theme', 'dark', 365)
   } else {
-    root.style.setProperty('--background-color', "#fff");
-    root.style.setProperty('--text-color', "#000");
-    root.style.setProperty('--grey-text-color', "#666");
+    root.style.setProperty('--background-color', "#fff")
+    root.style.setProperty('--text-color', "#000")
+    root.style.setProperty('--grey-text-color', "#666")
+
+    current_theme = 'light'
+    setCookie('theme', 'light', 365)
   }
 }
 
-function detectColorScheme() {
-    if(!window.matchMedia) {
-      return
-    }
-    const mqDark = window.matchMedia(DARK_THEME);
-    mqDark.addEventListener('change', e => { changeWebsiteTheme() });
-  
-    // Check if needed to be changed on page load
-    changeWebsiteTheme(mqDark);
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-detectColorScheme();
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function detectColorScheme() {
+  if(!window.matchMedia) {
+    return
+  }
+
+  const cookie_theme = getCookie('theme')
+
+  const mqDark = window.matchMedia(DARK_THEME)
+  mqDark.addEventListener('change', e => { changeWebsiteTheme() })
+
+  // Check if needed to be changed on page load. Weird logic because the function will always switch it.
+  if (!mqDark.matches || cookie_theme === 'light') {
+    current_theme = 'dark'
+  } else {
+    slider.checked = true
+  }
+
+  changeWebsiteTheme()
+}
+
+detectColorScheme()
