@@ -136,6 +136,7 @@
   padding: $spacing-unit/3;
   border-radius: $border-radius;
   font-size: 1.1em;
+  @extend %vertical-rhythm;
 
   &__purple {
     background: $purple-color;
