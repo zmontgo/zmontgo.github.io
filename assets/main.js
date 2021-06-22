@@ -69,7 +69,7 @@ function detectColorScheme() {
 }
 
 function js_Load() {
-  document.body.style.visibility = 'visible';
+  document.body.style.visibility = 'visible'
 }
 
 detectColorScheme()
