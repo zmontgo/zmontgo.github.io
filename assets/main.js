@@ -9,12 +9,16 @@ function changeWebsiteTheme() {
     root.style.setProperty('--text-color', "#fff")
     root.style.setProperty('--grey-text-color', "#999")
 
+    root.style.setProperty('color-scheme', "dark")
+
     current_theme = 'dark'
     setCookie('theme', 'dark', 365)
   } else {
     root.style.setProperty('--background-color', "#fff")
     root.style.setProperty('--text-color', "#000")
     root.style.setProperty('--grey-text-color', "#666")
+
+    root.style.setProperty('color-scheme', "light")
 
     current_theme = 'light'
     setCookie('theme', 'light', 365)
