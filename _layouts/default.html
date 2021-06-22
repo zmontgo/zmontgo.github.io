@@ -3,7 +3,7 @@
 
 {%- include head.html -%}
 
-<body>
+<body style="visibility: hidden;" onload="js_Load()">
   
   <!-- below navigation -->
 
@@ -24,5 +24,7 @@
   </noscript>
     
 </body>
+
+<noscript><style>body { visibility: visible!important; }</style></noscript>
 
 </html>
